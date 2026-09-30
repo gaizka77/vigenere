@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1e293b,
+            #0f172a 45%,
+            #020617
+        );
+
+    color: #f8fafc;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    background: #2563eb;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+.header h1 {
+    font-size: 28px;
+}
+
+.header p {
+    color: #94a3b8;
+
+    margin-top: 4px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: rgba(15, 23, 42, 0.9);
+
+    border: 1px solid #334155;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.hero h2 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+input[type="file"],
+input[type="text"] {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #475569;
+
+    background: #020617;
+
+    color: white;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type="text"]:focus {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.file-info {
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+.input-help {
+    margin-top: 7px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.button-group {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: #2563eb;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: #475569;
+
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #334155;
+}
+
+.btn-download {
+    width: 100%;
+
+    margin-top: 20px;
+
+    background: #16a34a;
+
+    color: white;
+}
+
+.btn-download:hover:not(:disabled) {
+    background: #15803d;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+/* =========================
+   PREVIEW
+========================= */
+
+.preview-section {
+    margin-top: 30px;
+}
+
+.preview-header {
+    margin-bottom: 10px;
+}
+
+.preview-header h3 {
+    font-size: 18px;
+}
+
+textarea {
+    width: 100%;
+
+    min-height: 250px;
+
+    resize: vertical;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: #cbd5e1;
+
+    font-family: monospace;
+
+    line-height: 1.6;
+
+    outline: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vigenère Cipher - PDF Encryption</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div class="logo">
+                🔐
+            </div>
+
+            <div>
+                <h1>Vigenère Cipher</h1>
+                <p>PDF Encryption & Decryption</p>
+            </div>
+        </header>
+
+        <main class="card">
+
+            <section class="hero">
+                <h2>Amankan Dokumen PDF</h2>
+
+                <p>
+                    Enkripsi dan dekripsi teks dalam file PDF
+                    menggunakan algoritma Vigenère Cipher.
+                </p>
+            </section>
+
+            <!-- File PDF -->
+            <div class="form-group">
+
+                <label for="pdfFile">
+                    📄 Pilih File PDF
+                </label>
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    accept=".pdf,application/pdf"
+                >
+
+                <p id="fileName" class="file-info">
+                    Belum ada file yang dipilih
+                </p>
+
+            </div>
+
+            <!-- Key -->
+            <div class="form-group">
+
+                <label for="secretKey">
+                    🔑 Secret Key
+                </label>
+
+                <input
+                    type="text"
+                    id="secretKey"
+                    placeholder="Masukkan kunci..."
+                    autocomplete="off"
+                >
+
+                <p class="input-help">
+                    Gunakan huruf A-Z sebagai kunci.
+                </p>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+
+                <button
+                    id="encryptBtn"
+                    class="btn btn-primary"
+                >
+                    🔒 Enkripsi PDF
+                </button>
+
+                <button
+                    id="decryptBtn"
+                    class="btn btn-secondary"
+                >
+                    🔓 Dekripsi PDF
+                </button>
+
+            </div>
+
+            <!-- Status -->
+            <div id="status" class="status">
+                Silakan pilih file PDF dan masukkan secret key.
+            </div>
+
+            <!-- Preview -->
+            <section class="preview-section">
+
+                <div class="preview-header">
+                    <h3>📋 Preview Hasil</h3>
+                </div>
+
+                <textarea
+                    id="preview"
+                    readonly
+                    placeholder="Hasil enkripsi atau dekripsi akan tampil di sini..."
+                ></textarea>
+
+            </section>
+
+            <!-- Download -->
+            <button
+                id="downloadBtn"
+                class="btn btn-download"
+                disabled
+            >
+                ⬇️ Download PDF
+            </button>
+
+        </main>
+
+        <footer>
+            <p>
+                Vigenère Cipher Web Application
+            </p>
+
+            <p>
+                Dibuat menggunakan HTML, CSS, dan JavaScript
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/vigenere.js"></script>
+    <script src="js/pdf-handler.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
